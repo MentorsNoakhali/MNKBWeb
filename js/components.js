@@ -17,6 +17,7 @@ const NAVBAR_HTML = `
     <li><a href="instructors.html">Instructors</a></li>
     <li><a href="study-abroad.html">Study Abroad</a></li>
     <li><a href="mock-tests.html">Mock Tests</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="theme-toggle" id="theme-toggle" aria-label="Switch Theme">
