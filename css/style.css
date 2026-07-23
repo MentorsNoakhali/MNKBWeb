@@ -238,6 +238,10 @@ h4 {
   margin-bottom: 50px;
 }
 
+.team-section .section-header {
+  margin-top: 60px;
+}
+
 .section-header h2 {
   font-size: 2.5rem;
   color: var(--text-main);
@@ -1173,7 +1177,8 @@ a.course-card-link {
   color: white;
 }
 
-.team-social a.phone-link {
+.team-social a.phone-link,
+.team-social a.phone {
   background: #dc2626;
   border-color: #dc2626;
   color: white;
@@ -1199,7 +1204,8 @@ a.course-card-link {
   border-color: #5947a0;
 }
 
-.team-social a.phone-link:hover {
+.team-social a.phone-link:hover,
+.team-social a.phone:hover {
   background: #b91c1c;
   border-color: #b91c1c;
 }
