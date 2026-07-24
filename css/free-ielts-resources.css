@@ -1,0 +1,335 @@
+/* ── Free IELTS Resources Download Page ────────────────── */
+
+.ielts-download-page {
+  min-height: 100vh;
+  background: var(--bg-light);
+  overflow-x: hidden;
+}
+
+/* ── Password Gate ─────────────────────────────────────── */
+.ielts-gate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(255, 26, 26, 0.08) 0%,
+      transparent 60%
+    ),
+    var(--bg-light);
+}
+
+.ielts-gate-brand {
+  margin-bottom: 28px;
+}
+
+.ielts-gate-brand img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.ielts-gate-card {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--accent);
+  border-radius: 16px;
+  padding: 40px 48px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+}
+
+.ielts-gate-card h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.9rem;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.ielts-gate-card h1 em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.ielts-gate-sub {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.ielts-gate-input {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  background: var(--surface-2);
+  color: var(--text-main);
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.ielts-gate-input:focus {
+  border-color: var(--accent);
+}
+
+.ielts-gate-error {
+  color: #ef4444;
+  margin-top: 10px;
+  display: none;
+  font-size: 0.9rem;
+}
+
+/* ── Download Panel ────────────────────────────────────── */
+.ielts-downloads {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.ielts-downloads-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ielts-downloads-header h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 2rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.ielts-downloads-header h1 em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.ielts-downloads-header p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.ielts-file-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.ielts-file-card {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: var(--transition);
+}
+
+.ielts-file-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.ielts-file-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(255, 26, 26, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ielts-file-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+}
+
+.ielts-file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ielts-file-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.ielts-file-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ── Button ────────────────────────────────────────────── */
+.btn-start {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 320px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-start:hover {
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-download:hover {
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+.btn-download svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ielts-gate {
+    min-height: calc(100vh - 64px);
+    padding: 24px 16px;
+  }
+
+  .ielts-gate-brand {
+    margin-bottom: 20px;
+  }
+
+  .ielts-gate-brand img {
+    height: 40px;
+  }
+
+  .ielts-gate-card {
+    padding: 28px 20px;
+    border-radius: 12px;
+  }
+
+  .ielts-gate-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .ielts-downloads {
+    padding: 24px 16px 60px;
+  }
+
+  .ielts-downloads-header {
+    margin-bottom: 28px;
+  }
+
+  .ielts-downloads-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .ielts-downloads-header p {
+    font-size: 0.9rem;
+  }
+
+  .ielts-file-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ielts-file-card {
+    padding: 16px;
+    flex-wrap: wrap;
+  }
+
+  .ielts-file-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ielts-file-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ielts-file-name {
+    font-size: 0.9rem;
+  }
+
+  .btn-download {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ielts-gate-card {
+    padding: 24px 16px;
+  }
+
+  .ielts-gate-card h1 {
+    font-size: 1.35rem;
+  }
+
+  .ielts-gate-input {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .btn-start {
+    max-width: 100%;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .ielts-downloads-header h1 {
+    font-size: 1.35rem;
+  }
+
+  .ielts-file-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ielts-file-icon {
+    display: none;
+  }
+}

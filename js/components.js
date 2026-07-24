@@ -95,6 +95,11 @@ function openAssessment() {
   window.location.href = "english-assessment.html";
 }
 
+function openFreeIELTS() {
+  window.open("https://forms.gle/wdYQqFao3pfwRiWQA", "_blank");
+  window.location.href = "free-ielts-resources.html";
+}
+
 function injectComponents() {
   const navbar = document.querySelector(".navbar");
   if (navbar) navbar.innerHTML = NAVBAR_HTML;
