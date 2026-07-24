@@ -24,6 +24,7 @@
     makeHL,
     renderExam,
     renderIntro,
+    renderPasswordGate,
     renderResults,
     saveInput,
     setupHighlight,
@@ -346,6 +347,53 @@
     return (q.alt || []).some(function (a) {
       return norm(a) === c;
     });
+  };
+
+  renderPasswordGate = function () {
+    app().innerHTML = `<div class="intro">
+  <div class="intro-brand">
+    <img src="Media/Mentors-Noakhali-Branch-Logo.png" alt="Mentors' Noakhali Branch" />
+  </div>
+  <div class="intro-card">
+    <h1>English Skill <em>Assessment</em></h1>
+    <p class="intro-sub">Enter the password from the Google Form to start the test.</p>
+    <div style="margin-top:24px">
+      <input type="password" id="assessment-password" placeholder="Enter password" style="
+        width: 100%;
+        max-width: 320px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        border: 2px solid var(--border, #333);
+        background: var(--card, #1a1a2e);
+        color: var(--text, #fff);
+        font-size: 1rem;
+        text-align: center;
+        outline: none;
+        box-sizing: border-box;
+      " autocomplete="off" />
+      <div id="password-error" style="color:var(--rd, #ff4444); margin-top:10px; display:none; font-size:0.9rem;"></div>
+      <button class="btn-start" id="password-submit" style="margin-top:16px; width: 100%; max-width: 320px;">Continue</button>
+    </div>
+  </div>
+</div>`;
+    $("password-submit").onclick = function () {
+      var input = $("assessment-password");
+      var error = $("password-error");
+      if (input.value === "MENTORS2026") {
+        renderIntro();
+      } else {
+        error.textContent = "Incorrect password. Please try again.";
+        error.style.display = "block";
+        input.value = "";
+        input.focus();
+      }
+    };
+    $("assessment-password").addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        $("password-submit").click();
+      }
+    });
+    $("assessment-password").focus();
   };
 
   renderIntro = function () {
@@ -878,6 +926,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("assessment-page");
     initTheme();
-    return renderIntro();
+    return renderPasswordGate();
   });
 }).call(this);
