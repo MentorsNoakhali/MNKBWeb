@@ -90,6 +90,11 @@ const FLOATING_HTML = `
 </a>
 `;
 
+function openAssessment() {
+  window.open("https://forms.gle/kUEHTQW5c7j5K121A", "_blank");
+  window.location.href = "english-assessment.html";
+}
+
 function injectComponents() {
   const navbar = document.querySelector(".navbar");
   if (navbar) navbar.innerHTML = NAVBAR_HTML;
